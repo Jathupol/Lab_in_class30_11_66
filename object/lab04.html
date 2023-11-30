@@ -1,0 +1,28 @@
+<!-- Lab04 Property shorthand -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<p></p>
+<p id="demo"></p>
+
+<script>
+const username = prompt('กรุณาใส่ชื่อผู้ใช้');
+const email = prompt('กรุณาใส่อีเมล');
+const password = prompt('กรุณาใส่พาสเวิร์ด');
+
+const user = {
+	username,
+	email,
+	password
+};
+
+alert(user['username']+" "+user['email']+" "+user['password']);
+
+
+</script>
+
+</body>
+</html>
+
+

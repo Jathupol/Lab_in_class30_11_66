@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fruits = {};
+
+function addFruit() {
+  let fruit = prompt("กรุณาพิมพ์ชื่อผลไม้:");
+  if (fruit.toLowerCase() === "stop") {
+    printFruits();
+    return;
+  }
+  
+  let count = parseInt(prompt(`กรุณาใส่จำนวนของ ${fruit}:`));
+  fruits[fruit] = count > 1 ? `${count} fruits` : `${count} fruit`;
+  
+  addFruit();
+}
+
+function printFruits() {
+  console.log(fruits);
+}
+
+addFruit();
+
+    </script>
+</body>
+</html>

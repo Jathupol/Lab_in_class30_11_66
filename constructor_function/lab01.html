@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Calculator() {
+  this.read = function() {
+    this.number1 = Number(prompt('ป้อนตัวเลขที่ 1', ''));
+    this.number2 = Number(prompt('ป้อนตัวเลขที่ 2', ''));
+  };
+
+  this.sum = function() {
+    return this.number1 + this.number2;
+  };
+
+  this.mul = function() {
+    return this.number1 * this.number2;
+  };
+}
+
+const calculator = new Calculator();
+calculator.read();
+alert(`ผลบวก: ${calculator.sum()}`);
+alert(`ผลคูณ: ${calculator.mul()}`);
+
+    </script>
+</body>
+</html>

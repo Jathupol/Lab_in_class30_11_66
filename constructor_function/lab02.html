@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Accumulator(startingValue) {
+  this.currentValue = startingValue;
+
+  this.read = function() {
+    let userInput = Number(prompt('ป้อนค่าที่ต้องการบวก', ''));
+    if (!isNaN(userInput)) {
+      this.currentValue += userInput;
+    } else {
+      alert('กรุณาป้อนตัวเลข');
+    }
+  };
+
+  this.show = function() {
+    alert(`ค่าที่เก็บไว้ในตอนนี้: ${this.currentValue}`);
+  };
+}
+
+const accumulator = new Accumulator(10); // กำหนดค่าเริ่มต้นเป็น 10
+accumulator.read(); // ใส่ค่าเพื่อบวก
+accumulator.show(); // แสดงค่าที่ถูกบวกเข้าไป
+
+    </script>
+</body>
+</html>

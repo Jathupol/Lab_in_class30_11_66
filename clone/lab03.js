@@ -1,0 +1,1 @@
+const permission = Object.assign({}, permission1, permission2, permission3, permission4);
